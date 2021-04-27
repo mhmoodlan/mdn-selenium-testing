@@ -34,7 +34,7 @@ public class MDNTest {
         driver = new ChromeDriver(caps);
         driver.manage().window().maximize();
     }
-    /*
+    
     @Test
     public void testLogin() {
         MainPage mainPage = new MainPage(this.driver);
@@ -51,7 +51,7 @@ public class MDNTest {
         userPage.logout();
         Assert.assertTrue(userPage.getLogoutMsg().contains("You have not signed in"));
     }
-*//*
+
     @Test
     public void testMultipleStaticPages() {
         MainPage mainPage = new MainPage(this.driver);
@@ -59,7 +59,7 @@ public class MDNTest {
         for(AbstractMap.Entry<String, String> entry : staticPages.entrySet()) {
             Assert.assertTrue(mainPage.getPageHeaderText(entry.getKey()).contains(entry.getValue()));
         }
-    }*//*
+    }
 
     @Test
     public void testBackButton() {
@@ -75,13 +75,13 @@ public class MDNTest {
             break;
         }
         
-    }*/
+    }
     
-    // @Test
-    // public void testDragAndDrop() {
-    //     HoverPage page = new HoverPage(this.driver);
-    //     Assert.assertTrue(page.hoverAndReturnCssValue("text-decoration").equals("underline solid rgb(33, 33, 33)"));
-    // }
+    @Test
+    public void testDragAndDrop() {
+        HoverPage page = new HoverPage(this.driver);
+        Assert.assertTrue(page.hoverAndReturnCssValue("text-decoration").equals("underline solid rgb(33, 33, 33)"));
+    }
 
     @Test
     public void testRegExPage() {
